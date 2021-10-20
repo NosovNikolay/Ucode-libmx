@@ -1,0 +1,7 @@
+.Ds_Store
+._.Ds_Store
+*.o
+*.out
+.vscode
+obj/
+*.a
