@@ -1,5 +1,5 @@
 #include "libmx.h"
-
+//done
 static int filesize(const char *fname) {
     if (!mx_strlen(fname)) return -1;
     int size = 0;
@@ -12,10 +12,13 @@ static int filesize(const char *fname) {
 }
 
 char *mx_file_to_str(const char *filename) {
-    if (!mx_strlen(filename)) return NULL;
+    if (!filename) return NULL;
     int size = filesize(filename);
     if (size < 0) return NULL;
     int fn = open(filename, O_RDONLY);
+    if (fn == -1) {
+        return NULL;
+    }
     char *text = (char *)malloc(size + 1);
     text[size] = '\0';
     read(fn, text, size);

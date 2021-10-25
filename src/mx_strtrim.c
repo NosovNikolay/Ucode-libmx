@@ -1,5 +1,5 @@
 #include "libmx.h"
-
+//need to fix
 static int space_b(char *str) {
     int i = 0;
     while (mx_isspace(str[i]) && i != mx_strlen(str))
@@ -33,7 +33,7 @@ char *mx_strtrim(const char *str) {
         result[j] = str[i];
         j++;
     }
-    result[j + 1] = '\0';
+    result[j] = '\0';
     return result;
 }
 

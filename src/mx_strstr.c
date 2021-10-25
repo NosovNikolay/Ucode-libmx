@@ -7,7 +7,7 @@ char *mx_strstr(const char *s1, const char *s2) {
         if(!mx_strncmp(s1, s2, size)) {
             return (char*)s1;  
         }
-        s1++;;
+        s1++;
     }
-    return (void*)0;
+    return NULL;
 }
